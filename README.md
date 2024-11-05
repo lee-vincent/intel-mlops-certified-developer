@@ -1,3 +1,17 @@
+#
+Course uses Intel Tiber Cloud instances that must be configured:
+```bash
+sudo apt update
+sudo apt upgrade -y
+curl -L -O https://mlops-miniconde.s3.us-east-1.amazonaws.com/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+# original repository
+# git clone https://github.com/intel/certified-developer
+git clone https://github.com/lee-vincent/intel-mlops-certified-developer.git
+```
+
+
 # Lab Overview
 
 This repository contains hands-on labs that help you practice and build skills associated with Intel® Certified Developer – MLOps Professional Certification exam. 
