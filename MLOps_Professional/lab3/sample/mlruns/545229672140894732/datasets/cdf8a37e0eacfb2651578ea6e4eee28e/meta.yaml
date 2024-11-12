@@ -1,0 +1,9 @@
+digest: e7cd4180
+name: dataset
+profile: '{"features_shape": [9975, 25], "features_size": 249375, "features_nbytes":
+  997500}'
+schema: '{"mlflow_tensorspec": {"features": "[{\"type\": \"tensor\", \"tensor-spec\":
+  {\"dtype\": \"float32\", \"shape\": [-1, 25]}}]", "targets": null}}'
+source: '{"tags": {"mlflow.user": "vlee", "mlflow.source.name": "serve.py", "mlflow.source.type":
+  "LOCAL", "mlflow.source.git.commit": "99a78f8a5bcc01d09ae2401f8abd39299dcdbe98"}}'
+source_type: code

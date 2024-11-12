@@ -1,0 +1,16 @@
+artifact_uri: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/lab3/sample/mlruns/545229672140894732/9b0bd37ad2164d28b7500845553c51c2/artifacts
+deleted_time: 1731403805934
+end_time: 1731238615296
+entry_point_name: ''
+experiment_id: '545229672140894732'
+lifecycle_stage: deleted
+run_id: 9b0bd37ad2164d28b7500845553c51c2
+run_name: debonair-skink-75
+run_uuid: 9b0bd37ad2164d28b7500845553c51c2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731238615051
+status: 3
+tags: []
+user_id: vlee

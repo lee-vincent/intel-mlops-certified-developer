@@ -1,0 +1,15 @@
+artifact_uri: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/lab3/sample/mlruns/545229672140894732/aebd2e8c077d416a8836ba4b3540c1f3/artifacts
+end_time: 1731404007520
+entry_point_name: ''
+experiment_id: '545229672140894732'
+lifecycle_stage: active
+run_id: aebd2e8c077d416a8836ba4b3540c1f3
+run_name: blushing-deer-794
+run_uuid: aebd2e8c077d416a8836ba4b3540c1f3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731404006971
+status: 3
+tags: []
+user_id: vlee

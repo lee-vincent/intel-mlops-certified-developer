@@ -1,0 +1,15 @@
+artifact_uri: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/lab3/sample/mlruns/545229672140894732/761eb44e5aca4ad2a89891e79f28e107/artifacts
+end_time: 1731238618778
+entry_point_name: ''
+experiment_id: '545229672140894732'
+lifecycle_stage: active
+run_id: 761eb44e5aca4ad2a89891e79f28e107
+run_name: sassy-zebra-753
+run_uuid: 761eb44e5aca4ad2a89891e79f28e107
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731238615298
+status: 3
+tags: []
+user_id: vlee

@@ -111,7 +111,6 @@ class HarvesterMaintenance():
                                         {'Motor_Current': 'float64'})
         self.X_test_scaled_transformed = X_test_scaled_transformed.astype(
                                         {'Motor_Current': 'float64'})
-        
 
     def train(self, ncpu: int = 4):
         """trains an XGBoost Classifier and Tracks Models with MLFlow
@@ -142,7 +141,6 @@ class HarvesterMaintenance():
             xgb_train = xgb.DMatrix(self.X_train_scaled_transformed, label=np.array(self.y_train))
                       
         self.xgb_model = xgb.train(self.parameters, xgb_train, num_boost_round=100)
-        
 
     def validate(self):
         """performs model validation with testing data
