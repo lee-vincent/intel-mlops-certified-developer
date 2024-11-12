@@ -1,5 +1,5 @@
 #
-git test2wgeqgt
+git test2wCgeqgt
 Lab3
 ```bash
 # navigate to lab3 directory
