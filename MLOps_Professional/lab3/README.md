@@ -1,5 +1,5 @@
 #
-Lab3333333333333
+Lab3
 ```bash
 # navigate to lab3 directory
 conda env create ./env/conda.yml
