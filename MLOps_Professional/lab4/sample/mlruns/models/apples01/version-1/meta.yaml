@@ -1,0 +1,13 @@
+aliases: []
+creation_timestamp: 1732448752328
+current_stage: Production
+description: ''
+last_updated_timestamp: 1732448779045
+name: apples01
+run_id: 1a93be95d92c4b83aa0a6a72ed732582
+run_link: ''
+source: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/lab4/sample/mlruns/838065821115119083/1a93be95d92c4b83aa0a6a72ed732582/artifacts/model
+status: READY
+status_message: null
+user_id: null
+version: 1

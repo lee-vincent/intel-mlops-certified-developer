@@ -1,0 +1,15 @@
+artifact_uri: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/lab4/sample/mlruns/838065821115119083/1a93be95d92c4b83aa0a6a72ed732582/artifacts
+end_time: 1732447506535
+entry_point_name: ''
+experiment_id: '838065821115119083'
+lifecycle_stage: active
+run_id: 1a93be95d92c4b83aa0a6a72ed732582
+run_name: melodic-fowl-254
+run_uuid: 1a93be95d92c4b83aa0a6a72ed732582
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732447504434
+status: 3
+tags: []
+user_id: vlee
