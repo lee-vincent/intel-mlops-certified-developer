@@ -1,0 +1,13 @@
+name: lab5
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - pip:
+    - torch
+    - torchvision
+    - intel_extension_for_pytorch
+    - argparse
+    - time
+
+

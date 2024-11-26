@@ -92,6 +92,7 @@ def main(FLAGS):
     flags = info['flags']
     amx_supported = False
     for flag in flags:
+        print(flag)
         if "amx" in flag:
             amx_supported = True
             break
