@@ -1,12 +1,11 @@
 name: lab5
 channels:
   - defaults
-  - conda-forge
 dependencies:
-  - python=3.10  # Specify the Python version you want to use
+  - python=3.9.13  # Specify the Python version you want to use
   - pip
   - pip:
-      - torch
-      - torchvision
-      - intel-extension-for-pytorch
+      - torch==2.0.0
+      - torchvision==0.15.1
+      - intel-extension-for-pytorch==2.0.0
       - py-cpuinfo
