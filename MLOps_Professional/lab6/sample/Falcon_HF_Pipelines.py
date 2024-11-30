@@ -18,7 +18,7 @@ def main(FLAGS):
         model=model,
         tokenizer=tokenizer,
         torch_dtype=torch.bfloat16,
-        trust_remote_code=False,
+        trust_remote_code=True,
         device_map="auto",
     )
 
