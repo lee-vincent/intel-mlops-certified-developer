@@ -9,3 +9,4 @@ dependencies:
       - torchvision==0.15.1
       - intel-extension-for-pytorch==2.0.0
       - py-cpuinfo
+      - numpy
