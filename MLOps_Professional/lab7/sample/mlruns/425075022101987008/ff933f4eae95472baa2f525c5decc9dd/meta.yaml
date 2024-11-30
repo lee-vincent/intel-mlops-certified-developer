@@ -1,0 +1,15 @@
+artifact_uri: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/lab7/sample/mlruns/425075022101987008/ff933f4eae95472baa2f525c5decc9dd/artifacts
+end_time: 1732965594704
+entry_point_name: ''
+experiment_id: '425075022101987008'
+lifecycle_stage: active
+run_id: ff933f4eae95472baa2f525c5decc9dd
+run_name: upset-owl-650
+run_uuid: ff933f4eae95472baa2f525c5decc9dd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732965590871
+status: 3
+tags: []
+user_id: vlee
