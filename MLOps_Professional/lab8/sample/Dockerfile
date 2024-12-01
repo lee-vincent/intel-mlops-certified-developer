@@ -1,23 +1,27 @@
-FROM public.ecr.aws/docker/library/python:3.8
+FROM public.ecr.aws/docker/library/python:3.9
 
-# copy assets over to image
+# Copy assets over to the image
 COPY . /pickerbot
 
-# set the working directory
+# Set the working directory
 WORKDIR /pickerbot
 
-# install dependancies
+# Install dependencies
 RUN apt-get update && apt-get install -y \
-python3-dev \
-build-essential
+    python3-dev \
+    python3-pip \
+    build-essential \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-# set PATH
-ENV PATH=.local/bin:$PATH
+# Set PATH environment variable
+ENV PATH="/root/.local/bin:$PATH"
 
-# install python dependancies    
-RUN pip3 install --user --no-cache-dir -r requirements.txt
+# Install Python dependencies
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-# exposing endpoint port
+# Expose the endpoint port
 EXPOSE 5000
 
+# Specify the entry point
 ENTRYPOINT ["python", "serve.py"]
