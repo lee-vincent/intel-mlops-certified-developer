@@ -1,4 +1,4 @@
-## Code Snippets for Completing Capstone - vinnie
+## Code Snippets for Completing Capstone - vinnie lee
 
 ```python
 # Part 1 - Connecting Training FE/BE Target File: RoboMaintenance.py
