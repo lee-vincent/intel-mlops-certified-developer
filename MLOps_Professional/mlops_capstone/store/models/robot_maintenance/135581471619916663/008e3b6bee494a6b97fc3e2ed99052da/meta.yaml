@@ -1,0 +1,15 @@
+artifact_uri: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/mlops_capstone/store/models/robot_maintenance/135581471619916663/008e3b6bee494a6b97fc3e2ed99052da/artifacts
+end_time: 1733740693773
+entry_point_name: ''
+experiment_id: '135581471619916663'
+lifecycle_stage: active
+run_id: 008e3b6bee494a6b97fc3e2ed99052da
+run_name: dapper-boar-28
+run_uuid: 008e3b6bee494a6b97fc3e2ed99052da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733740690977
+status: 3
+tags: []
+user_id: vlee

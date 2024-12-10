@@ -1,0 +1,42 @@
+artifact_path: model
+flavors:
+  python_function:
+    data: model.xgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.8.10
+  xgboost:
+    code: null
+    data: model.xgb
+    model_class: xgboost.core.Booster
+    model_format: xgb
+    xgb_version: 2.0.0
+mlflow_version: 2.15.0
+model_size_bytes: 2463293
+model_uuid: c40d935db79c404cb5183def68b0c849
+run_id: 3ebf956e956545bf9e39a35fc903d594
+signature:
+  inputs: '[{"type": "double", "name": "Age", "required": true}, {"type": "double",
+    "name": "Temperature", "required": true}, {"type": "double", "name": "Last_Maintenance",
+    "required": true}, {"type": "double", "name": "Motor_Current", "required": true},
+    {"type": "long", "name": "Number_Repairs", "required": true}, {"type": "long",
+    "name": "Manufacturer_A", "required": true}, {"type": "long", "name": "Manufacturer_B",
+    "required": true}, {"type": "long", "name": "Manufacturer_C", "required": true},
+    {"type": "long", "name": "Manufacturer_D", "required": true}, {"type": "long",
+    "name": "Manufacturer_E", "required": true}, {"type": "long", "name": "Manufacturer_F",
+    "required": true}, {"type": "long", "name": "Manufacturer_G", "required": true},
+    {"type": "long", "name": "Manufacturer_H", "required": true}, {"type": "long",
+    "name": "Manufacturer_I", "required": true}, {"type": "long", "name": "Manufacturer_J",
+    "required": true}, {"type": "long", "name": "Generation_Gen1", "required": true},
+    {"type": "long", "name": "Generation_Gen2", "required": true}, {"type": "long",
+    "name": "Generation_Gen3", "required": true}, {"type": "long", "name": "Generation_Gen4",
+    "required": true}, {"type": "long", "name": "Lubrication_LTA", "required": true},
+    {"type": "long", "name": "Lubrication_LTB", "required": true}, {"type": "long",
+    "name": "Lubrication_LTC", "required": true}, {"type": "long", "name": "Product_Assignment_PillA",
+    "required": true}, {"type": "long", "name": "Product_Assignment_PillB", "required":
+    true}, {"type": "long", "name": "Product_Assignment_PillC", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-12-09 10:39:54.245868'

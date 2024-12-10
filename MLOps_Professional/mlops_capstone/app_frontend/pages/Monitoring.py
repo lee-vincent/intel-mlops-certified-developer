@@ -14,6 +14,8 @@ st.markdown("### Record of Inference Results")
 st.caption("A table containing metadata about each inference request made.")
 
 # Logic for inference metadata table
+df = pd.read_csv(r'/home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/mlops_capstone/store/outputs/robot_maintenance/monitoring.csv')
+df
 
 st.divider()
 
@@ -21,6 +23,7 @@ st.markdown("### Chart of Inference Time in Milliseconds (ms) vs Request DateTim
 st.caption("A line graph depicting the change inference time over time. ")
 
 # Logic for inference latency line chart
+st.line_chart(data=df, x='datetime', y='inference_time')
 
 st.divider()
 
@@ -28,6 +31,7 @@ st.markdown("### Chart of Predicted Labels vs Request DateTime Stamps")
 st.caption("A plot depicting the change predictions over time. ")
 
 # Logic for predictions over time
+st.scatter_chart(data=df, x='datetime', y='prediction')
 
 st.divider()
 
@@ -35,3 +39,6 @@ st.markdown("### Histogram of Results")
 st.caption("A histogram showing the frequency of each prediction label.")
 
 # Logic for predictions histogram
+fig, ax = plt.subplots()
+ax.hist(df['prediction'])
+st.pyplot(fig)

@@ -1,0 +1,15 @@
+artifact_uri: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/mlops_capstone/store/models/robot_maintenance/135581471619916663/126855f117d4475089c8d7fe09d347e5/artifacts
+end_time: 1733740807553
+entry_point_name: ''
+experiment_id: '135581471619916663'
+lifecycle_stage: active
+run_id: 126855f117d4475089c8d7fe09d347e5
+run_name: skittish-bug-879
+run_uuid: 126855f117d4475089c8d7fe09d347e5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733740805539
+status: 3
+tags: []
+user_id: vlee

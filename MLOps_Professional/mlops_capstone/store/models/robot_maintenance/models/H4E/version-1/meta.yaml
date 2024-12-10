@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1733740957133
+current_stage: Production
+description: ''
+last_updated_timestamp: 1733741067772
+name: H4E
+run_id: 008e3b6bee494a6b97fc3e2ed99052da
+run_link: ''
+source: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/mlops_capstone/store/models/robot_maintenance/135581471619916663/008e3b6bee494a6b97fc3e2ed99052da/artifacts/model
+status: READY
+status_message: null
+storage_location: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/mlops_capstone/store/models/robot_maintenance/135581471619916663/008e3b6bee494a6b97fc3e2ed99052da/artifacts/model
+user_id: null
+version: 1

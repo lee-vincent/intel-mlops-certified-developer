@@ -1,0 +1,15 @@
+artifact_uri: /home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/mlops_capstone/store/models/robot_maintenance/135581471619916663/3ebf956e956545bf9e39a35fc903d594/artifacts
+end_time: 1733740795984
+entry_point_name: ''
+experiment_id: '135581471619916663'
+lifecycle_stage: active
+run_id: 3ebf956e956545bf9e39a35fc903d594
+run_name: efficient-deer-8
+run_uuid: 3ebf956e956545bf9e39a35fc903d594
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733740793421
+status: 3
+tags: []
+user_id: vlee

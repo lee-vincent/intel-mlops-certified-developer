@@ -80,5 +80,20 @@ def inference(model_name: str, stage: str, model_run_id: int, scaler_file_name: 
             status = 'Equipment Requires Scheduled Maintenance - Plan Accordingly'
     
     # logic for monitoring log file creation
-    
+    current_datetime = datetime.datetime.now()
+    current_datetime_str = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+    data_dict = {'model':model_name, 'stage': stage, 
+                'model_run_id': model_run_id, 'scaler_file_name': scaler_file_name, 
+                'prediction': prediction, 'inference_time': elapsed_time_milliseconds, 'datetime': current_datetime_str}
+    file_path = scaler_destination + '/monitoring.csv'
+
+
+    if os.path.isfile(file_path):
+        df = pd.read_csv(file_path)
+    else:
+        df = pd.DataFrame(columns=data_dict.keys())
+
+    df = pd.concat([df, pd.DataFrame(data_dict, index=[0])], ignore_index=True)
+    df.to_csv(file_path, index=False)
+
     return status

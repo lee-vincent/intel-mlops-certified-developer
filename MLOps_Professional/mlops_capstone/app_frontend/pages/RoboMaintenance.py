@@ -21,16 +21,31 @@ with app_tab:
     
     st.markdown('#### Predictive Maintenance Model Training')
     
-    data_file = st.text_input('Training Data File Path',key='data', value='/home/ubuntu/certified-developer/MLOps_Professional/mlops_capstone/store/datasets/robot_maintenance/train.pkl')
+    data_file = st.text_input('Training Data File Path',key='data', value='/home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/mlops_capstone/store/datasets/robot_maintenance/train.pkl')
     model_name = st.text_input('Model Name',key='model name', help='The name of the model without extensions', value='model')
     model_path = st.text_input('Model Save Path',key='model path', help='Provide the path without file name', value='./')
     test_size = st.slider('Percentage of data saved for Testing',min_value=5, max_value=50, value=25, step=5)
     ncpu = st.number_input('Threads', min_value=2, max_value=16, step=2)
-    mlflow_tracking_uri = st.text_input('Tracking URI',key='uri', value='/home/ubuntu/certified-developer/MLOps_Professional/mlops_capstone/store/models/robot_maintenance')
+    mlflow_tracking_uri = st.text_input('Tracking URI',key='uri', value='/home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/mlops_capstone/store/models/robot_maintenance')
     mlflow_new_experiment = st.text_input('New Experiment Name',key='new exp')
     mlflow_experiment = st.text_input('Existing Experiment Name',key='existing exp') 
     
     # logic for training API connections
+    if st.button('Train Model', key='training'):
+        # build request
+
+        URL = 'http://localhost:5000/train'
+        DATA = {'file':data_file, 'model_name':model_name, 'model_path':model_path, 
+                  'test_size': test_size, 'ncpu': 4, 'mlflow_tracking_uri':mlflow_tracking_uri,
+                  'mlflow_new_experiment':mlflow_new_experiment, 'mlflow_experiment':mlflow_experiment}
+        TRAINING_RESPONSE = requests.post(url = URL, json = DATA)
+
+        if len(TRAINING_RESPONSE.text) < 40:       
+            st.error("Model Training Failed")
+            st.info(TRAINING_RESPONSE.text)
+        else:
+            st.success('Training was Succesful')
+            st.info('Model Validation Accuracy Score: ' + str(TRAINING_RESPONSE.json().get('validation scores')))
      
     st.divider()
     
@@ -40,7 +55,7 @@ with app_tab:
     stage = manufacturer = st.selectbox('Model Stage', options = ['Staging','Production'])
     model_run_id = st.text_input('Run ID',key='model id')
     scaler_file_name = st.text_input('Scaler File Name',key='scalar file', value='model_scaler.joblib')
-    scaler_destination = st.text_input('Scaler Destination',key='scalerdest', value= '/home/ubuntu/certified-developer/MLOps_Professional/mlops_capstone/store/outputs/robot_maintenance') 
+    scaler_destination = st.text_input('Scaler Destination',key='scalerdest', value= '/home/vlee/repos/intel-mlops-certified-developer/MLOps_Professional/mlops_capstone/store/outputs/robot_maintenance') 
     
     col21, col22, col23 = st.columns(3)
 
@@ -68,7 +83,18 @@ with app_tab:
        'Number_Repairs':num_repairs, 'Manufacturer':manufacturer, 
        'Generation':generation,'Lubrication':lubrication_type, 'Product_Assignment':product_assignment}]
 
-# logic for inference API connections
+    # logic for inference API connections
+    if st.button('Run Maintenance Analysis', key='analysis'):
+            URL = 'http://localhost:5000/predict'
+            DATA = {'model_name':model_name, 'stage':stage, 'sample':sample, 
+                    'model_run_id':model_run_id, 'scaler_file_name':scaler_file_name, 'scaler_destination':scaler_destination}
+            INFERENCE_RESPONSE = requests.post(url = URL, json = DATA)
+
+            if len(INFERENCE_RESPONSE.text) < 40:       
+                st.error("Model Inference Failed")
+                st.info(INFERENCE_RESPONSE.text)
+            else:
+                st.success(str(INFERENCE_RESPONSE.json().get('Maintenance Recommendation')))
             
 # Help tab frontend below
     
